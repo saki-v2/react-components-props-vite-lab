@@ -3,12 +3,14 @@ import Article from "./Article";
 export default function ArticleList(props) {
   return (
     <main>
-      <Article
-        key={props.id}
-        title={props.title}
-        date={props.date}
-        preview={props.preview}
-      />
+      {props.posts.map((post) => (
+        <Article
+          key={post.id}
+          title={post.title}
+          date={post.date}
+          preview={post.preview}
+        />
+      ))}
     </main>
   );
 }

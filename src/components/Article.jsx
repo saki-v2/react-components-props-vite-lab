@@ -1,13 +1,11 @@
-export default function Article(props){
+export default function Article(props) {
+  return (
+    <article>
 
-
-    return(
-        <article>
-
-            <h3>{props.title}</h3>
-            <small>{props.date}</small>
-            <p>{props.preview}</p>
-
-        </article>
-    );
+      <h3>{props.title}</h3>
+      <small>{props.date || "January 1, 1970"}</small>
+      <p>{props.preview}</p>
+      
+    </article>
+  );
 }
